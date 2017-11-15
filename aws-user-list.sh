@@ -1,1 +1,1 @@
-/root/.local/bin/aws iam list-users
+aws iam list-users
