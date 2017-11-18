@@ -3,6 +3,6 @@
 yum install -y httpd
 setenforce 0
 systemctl stop firewalld
-echo "Hello Ujwal" > /var/www/html/index.html
+echo "Hello Ranga and Sunil" > /var/www/html/index.html
 systemctl enable httpd
 systemctl start httpd
