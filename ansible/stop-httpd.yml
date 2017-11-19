@@ -1,0 +1,12 @@
+---
+- hosts: server1
+  remote_user: root
+  tasks:
+    - name: Installs httpd web server
+      yum: pkg=httpd state=absent update_cache=true
+      notify:
+        - stop httpd
+
+  handlers:
+    - name: stop httpd
+      service: name=httpd state=stopped
