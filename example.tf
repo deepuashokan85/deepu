@@ -8,10 +8,10 @@ resource "aws_instance" "example" {
   ami           = "ami-26ebbc5c"
   instance_type = "t2.micro"
 }
-data "terraform_remote_state" "foo" {
-  backend = "test-ariba"
-  config {
-    name         = "bigbang/example"
+
+terraform {
+  backend "atlas" {
+    address = "https://tfe.ariba.com"
+    name    = "ariba/test-ariba"
   }
 }
-
