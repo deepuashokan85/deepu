@@ -9,7 +9,7 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
 }
 data "terraform_remote_state" "foo" {
-  backend = "atlas"
+  backend = "test-ariba"
   config {
     name         = "bigbang/example"
   }
