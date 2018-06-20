@@ -8,4 +8,10 @@ resource "aws_instance" "example" {
   ami           = "ami-26ebbc5c"
   instance_type = "t2.micro"
 }
+data "terraform_remote_state" "foo" {
+  backend = "atlas"
+  config {
+    name         = "bigbang/example"
+  }
+}
 
