@@ -11,7 +11,7 @@ resource "aws_instance" "example" {
 
 terraform {
   backend "atlas" {
-    address = "https://tfe.ariba.com"
+    address = "https://tfe.gcp.ariba.com"
     name    = "ariba/test-ariba"
   }
 }
