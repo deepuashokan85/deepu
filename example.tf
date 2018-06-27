@@ -8,10 +8,3 @@ resource "aws_instance" "example" {
   ami           = "ami-26ebbc5c"
   instance_type = "t2.micro"
 }
-
-terraform {
-  backend "atlas" {
-    address = "https://tfe.gcp.ariba.com"
-    name    = "ariba/test-ariba"
-  }
-}
